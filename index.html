@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0d12">
+<title>FLMPI Blind Building Challenge 2026</title>
+<style>
+:root{--bg:#080b10;--panel:#0f141b;--panel2:#151b24;--panel3:#1b222d;--text:#f5f7fa;--muted:#99a5b5;--line:rgba(255,255,255,.09);--red:#e51f26;--red2:#ff4a4f;--gold:#f2c94c;--green:#48c774;--shadow:0 22px 70px rgba(0,0,0,.38)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 70% -10%,rgba(229,31,38,.14),transparent 32%),linear-gradient(180deg,#080b10 0%,#0a0d12 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}button,a{font:inherit}a{color:inherit}.app{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;padding:28px 20px;border-right:1px solid var(--line);background:rgba(10,13,18,.92);backdrop-filter:blur(18px);display:flex;flex-direction:column;z-index:20}.brand{display:flex;align-items:center;gap:13px;padding:3px 8px 28px}.brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:0 0 auto;box-shadow:0 0 0 4px rgba(255,255,255,.04)}.brand strong{font-size:17px;letter-spacing:.08em}.brand span{display:block;color:var(--red2);font-size:11px;font-weight:800;letter-spacing:.12em;margin-top:3px}.side-label{font-size:10px;letter-spacing:.16em;color:#667284;font-weight:800;padding:0 12px;margin:8px 0 10px}.nav{display:grid;gap:6px}.nav a{display:flex;align-items:center;gap:12px;padding:12px 13px;border-radius:12px;color:#b5bfcc;text-decoration:none;font-size:13px;font-weight:700;transition:.2s}.nav a:hover,.nav a.active{background:rgba(229,31,38,.12);color:#fff}.nav .ico{width:24px;text-align:center;color:#7f8a99}.side-bottom{margin-top:auto;padding:16px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.side-bottom small{display:block;color:#697586;font-size:10px;letter-spacing:.1em;font-weight:800;margin-bottom:8px}.side-bottom b{font-size:13px}.main{min-width:0}.topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 42px;position:sticky;top:0;z-index:15;background:rgba(8,11,16,.78);backdrop-filter:blur(16px)}.topbar .title{font-size:12px;color:#7f8a99;letter-spacing:.08em;font-weight:800}.topbar .status{display:flex;align-items:center;gap:9px;font-size:12px;color:#aab4c0}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px rgba(72,199,116,.7)}.content{max-width:1500px;margin:0 auto;padding:42px 42px 70px}.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(320px,.8fr);gap:26px;align-items:stretch;margin-bottom:28px}.hero-main,.hero-side{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));border-radius:22px;box-shadow:var(--shadow)}.hero-main{padding:42px 46px;position:relative;overflow:hidden}.hero-main:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-170px;top:-180px;background:radial-gradient(circle,rgba(229,31,38,.3),transparent 68%);pointer-events:none}.eyebrow{font-size:11px;letter-spacing:.18em;color:var(--red2);font-weight:900}h1{font-size:clamp(48px,5vw,82px);line-height:.92;letter-spacing:-.055em;margin:16px 0 20px;max-width:780px}.hero-main p{max-width:720px;color:#9ea9b8;line-height:1.75;font-size:15px;margin:0}.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.pill{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid var(--line);font-size:11px;font-weight:800;color:#c6ced8}.hero-side{padding:28px;display:flex;flex-direction:column;justify-content:space-between}.hero-side .mini-logo{width:78px;height:78px;border-radius:50%;object-fit:cover;margin-bottom:20px}.hero-side h3{font-size:22px;margin:0 0 9px}.hero-side p{color:#8793a2;font-size:13px;line-height:1.7;margin:0}.section{margin-top:34px;scroll-margin-top:100px}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:17px}.section-head h2{font-size:27px;letter-spacing:-.025em;margin:4px 0 0}.section-head p{margin:0;color:#7f8a99;font-size:13px;max-width:720px;line-height:1.6}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.info{padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:16px;min-height:150px}.info .num{font-size:11px;color:#677486;font-weight:900;letter-spacing:.1em}.info strong{display:block;font-size:14px;margin:15px 0 8px}.info p{color:#8591a1;font-size:12px;line-height:1.7;margin:0}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.rule{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.rule b{font-size:13px}.rule p{font-size:12px;color:#7f8a99;line-height:1.7;margin:7px 0 0}.score{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.score .info{min-height:125px}.score .weight{font-size:22px;font-weight:950;color:#fff;margin-top:13px}.curse-toolbar{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;margin-bottom:14px;padding:14px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025)}.toolbar-copy{font-size:12px;color:#8995a5;line-height:1.6}.toolbar-copy b{color:#fff}.player{display:flex;gap:8px;align-items:center}.player input{width:190px;background:#090d12;border:1px solid var(--line);border-radius:10px;color:#fff;padding:10px 12px;outline:none;font-size:12px}.player input:focus{border-color:rgba(229,31,38,.6)}.player button{border:0;border-radius:10px;padding:10px 13px;background:var(--red);color:#fff;font-weight:900;font-size:11px;cursor:pointer}.player button.secondary{background:transparent;border:1px solid var(--line);color:#d6dce4}.cases{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}.case{min-height:190px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#121820,#0e131a);position:relative;overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}.case:hover{transform:translateY(-3px);border-color:rgba(229,31,38,.55);box-shadow:0 15px 35px rgba(0,0,0,.25)}.case:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(229,31,38,.09),transparent 45%);pointer-events:none}.case-inner{height:100%;padding:19px;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:1}.case-top{display:flex;align-items:center;justify-content:space-between}.case-num{font-size:34px;font-weight:950;letter-spacing:-.06em;color:#fff}.case-index{font-size:10px;color:#697586;font-weight:900;letter-spacing:.12em}.case-title{font-size:13px;line-height:1.45;font-weight:800;max-width:220px}.case-action{font-size:10px;color:#8a95a4;font-weight:800;letter-spacing:.08em}.case.claimed{cursor:not-allowed;opacity:.46;filter:saturate(.5)}.case.claimed:hover{transform:none;box-shadow:none;border-color:var(--line)}.case.claimed:after{content:"✓ SUDAH DIAMBIL";position:absolute;left:12px;bottom:12px;padding:5px 8px;border-radius:999px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);font-size:9px;font-weight:900;letter-spacing:.08em}.selected-note{margin-top:13px;padding:12px 14px;border:1px solid rgba(72,199,116,.14);background:rgba(72,199,116,.05);border-radius:12px;color:#9eabb8;font-size:12px;line-height:1.6}.selected-note strong{color:#48c774}.footer{margin-top:50px;padding-top:25px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#687484;font-size:11px}.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:30px;background:rgba(0,0,0,.76);backdrop-filter:blur(8px)}.modal.show{display:flex}.modalbox{width:min(920px,100%);max-height:88vh;overflow:auto;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:#0d1218;box-shadow:0 30px 100px rgba(0,0,0,.55);padding:30px}.modal-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:20px}.tag{display:inline-flex;padding:7px 10px;border-radius:999px;background:rgba(229,31,38,.12);color:#ff6b70;border:1px solid rgba(229,31,38,.2);font-size:10px;font-weight:900;letter-spacing:.1em}.close{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:transparent;color:#fff;font-size:22px;cursor:pointer}.modal h2{font-size:31px;letter-spacing:-.03em;margin:11px 0 0}.curse-text{color:#9ba6b5;line-height:1.8;font-size:14px;margin:0 0 20px}.curse-effect{padding:17px;border-radius:14px;background:rgba(229,31,38,.07);border:1px solid rgba(229,31,38,.18);margin-bottom:14px}.curse-effect small{display:block;color:#ff646a;font-size:9px;letter-spacing:.12em;font-weight:900;margin-bottom:7px}.curse-effect strong{font-size:18px;line-height:1.45}.confirm-note{padding:14px 16px;border-radius:13px;background:rgba(242,201,76,.07);border:1px solid rgba(242,201,76,.14);color:#9fa9b7;font-size:12px;line-height:1.7}.confirm-note strong{color:#f2c94c}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:10px;padding:11px 16px;background:var(--red);color:#fff;font-weight:900;font-size:12px;cursor:pointer}.btn:hover{background:#f02a31}.btn.secondary{background:transparent;border:1px solid var(--line);color:#d6dce4}.hidden{display:none!important}.history{display:grid;gap:8px;margin-top:14px}.history-item{display:flex;justify-content:space-between;gap:15px;padding:11px 13px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.02);font-size:11px;color:#9ca7b5}.history-item b{color:#fff}.reset{margin-top:13px;font-size:10px;color:#6f7b8b;text-decoration:underline;cursor:pointer;background:none;border:0;padding:0}@media(max-width:1250px){.cases{grid-template-columns:repeat(4,minmax(0,1fr))}.grid4{grid-template-columns:repeat(2,1fr)}.score{grid-template-columns:repeat(3,1fr)}}@media(max-width:980px){.app{grid-template-columns:1fr}.sidebar{position:static;height:auto;padding:15px 20px;flex-direction:row;align-items:center;border-right:0;border-bottom:1px solid var(--line)}.brand{padding:0;margin-right:18px}.brand img{width:44px;height:44px}.nav,.side-label,.side-bottom{display:none}.topbar{padding:0 22px}.content{padding:28px 22px 55px}.hero{grid-template-columns:1fr}.hero-side{min-height:210px}.cases{grid-template-columns:repeat(3,minmax(0,1fr))}.curse-toolbar{grid-template-columns:1fr}}@media(max-width:700px){.grid4,.rules,.cases,.score{grid-template-columns:1fr 1fr}.hero-main{padding:30px 25px}h1{font-size:48px}.section-head{display:block}.section-head p{margin-top:7px}.footer{display:block;line-height:1.8}.player{align-items:stretch;flex-direction:column}.player input{width:100%}}@media(max-width:480px){.grid4,.rules,.cases,.score{grid-template-columns:1fr}.topbar .title{display:none}.topbar{justify-content:flex-end}.content{padding:22px 15px 45px}.hero-main{padding:25px 20px}.modal{padding:12px}.modalbox{padding:20px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><img src="logo-flmpi.png" alt="Logo FLMPI"><div><strong>FLMPI</strong><span>BLIND BUILDING 2026</span></div></div>
+    <div class="side-label">NAVIGATION</div>
+    <nav class="nav">
+      <a class="active" href="#home"><span class="ico">⌂</span>Overview</a>
+      <a href="#about"><span class="ico">◈</span>About Blind Building</a>
+      <a href="#rules"><span class="ico">▣</span>Ketentuan</a>
+      <a href="#curses"><span class="ico">◆</span>Kartu Kutukan</a>
+      <a href="#assessment"><span class="ico">✦</span>Assessment</a>
+    </nav>
+    <div class="side-bottom"><small>ORGANISASI</small><b>Forum Lembaga Mahasiswa Perindustrian Indonesia</b></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar"><div class="title">OPEN RECRUITMENT / BLIND BUILDING</div><div class="status"><span class="dot"></span> Sistem siap digunakan</div></header>
+    <div class="content">
+      <section class="hero" id="home">
+        <div class="hero-main">
+          <div class="eyebrow">FLMPI • OPEN RECRUITMENT 2026</div>
+          <h1>BUILD BLIND.<br>ADAPT FAST.</h1>
+          <p>Blind Building menguji bagaimana peserta bekerja sama membangun struktur setinggi mungkin menggunakan material yang diberikan, dalam batasan peran tertentu, lalu beradaptasi ketika aturan berubah pada bagian akhir.</p>
+          <div class="hero-meta"><span class="pill">1 Kelompok</span><span class="pill">10 Kartu Kutukan</span><span class="pill">2 Kutukan / Orang</span><span class="pill">Rule Change</span></div>
+        </div>
+        <div class="hero-side"><img class="mini-logo" src="logo-flmpi.png" alt="Logo FLMPI"><div><h3>Build beyond the rules.</h3><p>Tujuan permainan bukan sekadar menghasilkan struktur tertinggi, tetapi memperlihatkan cara tim berkomunikasi, membagi peran, memimpin, memecahkan masalah, dan beradaptasi.</p></div></div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-head"><div><div class="eyebrow">01 — UNDERSTAND</div><h2>Apa itu Blind Building?</h2></div><p>Komponen ini menilai perilaku yang terlihat selama proses pembangunan, bukan hanya tinggi atau bentuk akhir struktur.</p></div>
+        <div class="grid4">
+          <div class="info"><span class="num">STEP 01</span><strong>Pahami brief</strong><p>Peserta menerima material, pembagian peran, batasan, dan target pembangunan dari panitia.</p></div>
+          <div class="info"><span class="num">STEP 02</span><strong>Bangun bersama</strong><p>Kelompok menyusun strategi dan membangun struktur setinggi mungkin dengan sumber daya yang diberikan.</p></div>
+          <div class="info"><span class="num">STEP 03</span><strong>Hadapi kutukan</strong><p>Kartu kutukan memberi batasan khusus kepada peserta. Setiap orang memperoleh dua kutukan.</p></div>
+          <div class="info"><span class="num">STEP 04</span><strong>Adaptasi</strong><p>Pada bagian akhir, aturan dapat berubah. Kelompok harus menyesuaikan strategi tanpa kehilangan tujuan.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="rules">
+        <div class="section-head"><div><div class="eyebrow">02 — RULES</div><h2>Ketentuan Teknis Blind Building</h2></div><p>Bagian ini menjadi briefing permainan. Detail material, durasi, dan pembagian peran dapat ditetapkan panitia sesuai kondisi sesi.</p></div>
+        <div class="rules">
+          <div class="rule"><b>01 — Target</b><p>Bangun struktur setinggi mungkin menggunakan material yang diberikan. Struktur harus tetap berdiri saat waktu/penilaian akhir dilakukan.</p></div>
+          <div class="rule"><b>02 — Material</b><p>Gunakan hanya material yang diberikan panitia. Tidak diperbolehkan mengambil atau menggunakan benda di luar area permainan.</p></div>
+          <div class="rule"><b>03 — Peran</b><p>Peserta mengikuti batasan peran yang ditentukan panitia. Batasan tersebut tetap berlaku selama fase pembangunan kecuali dinyatakan berubah.</p></div>
+          <div class="rule"><b>04 — Komunikasi</b><p>Informasi harus disampaikan melalui cara yang masih diperbolehkan oleh peran dan kartu kutukan masing-masing.</p></div>
+          <div class="rule"><b>05 — Kartu Kutukan</b><p>Setiap peserta mendapatkan dua kartu kutukan. Efek kartu berlaku sesuai instruksi kartu dan tidak boleh sengaja diabaikan.</p></div>
+          <div class="rule"><b>06 — Rule Change</b><p>Pada bagian akhir, panitia dapat memberikan perubahan aturan. Tim wajib menyesuaikan strategi terhadap kondisi baru tersebut.</p></div>
+          <div class="rule"><b>07 — Fair Play</b><p>Dilarang merusak struktur kelompok lain, mengambil material kelompok lain, atau melakukan tindakan yang membahayakan peserta.</p></div>
+          <div class="rule"><b>08 — Penilaian</b><p>Hasil akhir struktur bukan satu-satunya dasar. Assessor mengamati proses dan perilaku peserta sepanjang permainan.</p></div>
+          <div class="rule"><b>09 — Keputusan Panitia</b><p>Jika terjadi perselisihan tentang pelaksanaan aturan, keputusan panitia/assessor menjadi acuan selama sesi berlangsung.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="assessment">
+        <div class="section-head"><div><div class="eyebrow">03 — ASSESSMENT</div><h2>Apa yang Dinilai?</h2></div><p>Bobot internal Blind Building mengikuti rubrik penilaian FLMPI Open Recruitment 2026.</p></div>
+        <div class="score">
+          <div class="info"><span class="num">01</span><strong>Communication</strong><div class="weight">20%</div></div>
+          <div class="info"><span class="num">02</span><strong>Teamwork</strong><div class="weight">25%</div></div>
+          <div class="info"><span class="num">03</span><strong>Leadership</strong><div class="weight">20%</div></div>
+          <div class="info"><span class="num">04</span><strong>Problem Solving</strong><div class="weight">20%</div></div>
+          <div class="info"><span class="num">05</span><strong>Adaptability</strong><div class="weight">15%</div></div>
+        </div>
+        <div class="selected-note"><strong>Catatan assessor:</strong> nilai berdasarkan perilaku yang dapat diamati. Blind Building menyumbang <strong>20%</strong> terhadap nilai akhir seleksi.</div>
+      </section>
+
+      <section class="section" id="curses">
+        <div class="section-head"><div><div class="eyebrow">04 — CURSE CARDS</div><h2>10 Kartu Kutukan</h2></div><p>Buka kartu untuk memberikan satu kutukan kepada peserta. Sistem mencatat nama penerima dan mengunci kartu setelah diambil agar satu kartu tidak digunakan dua kali.</p></div>
+        <div class="curse-toolbar">
+          <div class="toolbar-copy"><b id="claimedCount">0</b> / 10 kartu sudah diambil. Setiap peserta maksimal <b>2 kartu kutukan</b>. Masukkan nama sebelum membuka kartu.</div>
+          <div class="player"><input id="playerName" maxlength="40" placeholder="Nama peserta"><button onclick="setPlayer()">Tetapkan</button></div>
+        </div>
+        <div class="cases" id="curseGrid"></div>
+        <div class="history" id="history"></div>
+        <button class="reset" onclick="resetGame()">Reset seluruh kartu & riwayat</button>
+      </section>
+
+      <footer class="footer"><span>FLMPI • Open Recruitment 2026</span><span>Blind Building • Build beyond the rules.</span></footer>
+    </div>
+  </main>
+</div>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modalbox">
+    <div class="modal-head"><div><span class="tag" id="curseTag">CURSE 01</span><h2 id="curseTitle">Kartu Kutukan</h2></div><button class="close" onclick="closeCurse()" aria-label="Tutup">×</button></div>
+    <p class="curse-text" id="curseText"></p>
+    <div class="curse-effect"><small>EFEK KUTUKAN</small><strong id="curseEffect"></strong></div>
+    <div class="confirm-note">Kartu ini akan diberikan kepada <strong id="recipientName">—</strong>. Setelah dikonfirmasi, kartu tidak dapat diambil ulang dan akan tercatat di riwayat sesi.</div>
+    <div class="actions"><button class="btn" onclick="claimCurse()">Ambil Kartu Ini</button><button class="btn secondary" onclick="closeCurse()">Batal</button></div>
+  </div>
+</div>
+
+<script>
+const curses=[
+ {title:"Silent Builder",text:"Peserta tetap ikut membangun, tetapi harus mengandalkan observasi dan komunikasi non-verbal.",effect:"DILARANG BERBICARA selama fase pembangunan. Tidak boleh memberi instruksi secara lisan."},
+ {title:"No Tape",text:"Peserta tetap dapat menyusun struktur, tetapi kehilangan salah satu alat bantu yang umum digunakan untuk mengikat bagian struktur.",effect:"DILARANG MENGGUNAKAN SELOTIP / TAPE oleh peserta ini selama kutukan aktif."},
+ {title:"Off-Hand Only",text:"Peserta harus mengubah kebiasaan motoriknya saat membantu proses pembangunan.",effect:"HANYA BOLEH MENGGUNAKAN TANGAN NON-DOMINAN untuk menyentuh material."},
+ {title:"No Pointing",text:"Peserta harus menyampaikan kebutuhan tanpa menggunakan gestur menunjuk langsung ke benda atau orang.",effect:"DILARANG MENUNJUK menggunakan jari. Gunakan kata-kata atau gestur lain yang diperbolehkan."},
+ {title:"No Direct Instruction",text:"Peserta tetap boleh berkontribusi, tetapi tidak boleh menjadi pemberi instruksi langsung kepada anggota lain.",effect:"DILARANG MEMBERI PERINTAH LANGSUNG. Peserta hanya boleh menyampaikan observasi atau pertanyaan."},
+ {title:"One Material",text:"Peserta harus membatasi interaksinya dengan material dan memilih kapan kontribusinya paling penting.",effect:"HANYA BOLEH MEMEGANG SATU BAGIAN / SATU MATERIAL PADA SATU WAKTU."},
+ {title:"No Questions",text:"Peserta dituntut mengambil keputusan dengan informasi yang tersedia tanpa meminta klarifikasi kepada anggota lain.",effect:"DILARANG BERTANYA kepada anggota lain. Tetap boleh merespons pertanyaan orang lain jika diperbolehkan oleh kutukan lain."},
+ {title:"Frozen Position",text:"Peserta harus tetap berada pada posisi awalnya dan mengandalkan koordinasi tim dari tempat tersebut.",effect:"DILARANG BERPINDAH POSISI dari area yang ditetapkan panitia sampai kutukan berakhir."},
+ {title:"No Name Call",text:"Peserta harus berkomunikasi tanpa memanggil anggota lain menggunakan nama atau panggilan langsung.",effect:"DILARANG MEMANGGIL NAMA peserta lain. Gunakan deskripsi posisi atau objek sebagai pengganti."},
+ {title:"Three-Second Rule",text:"Peserta harus lebih selektif dalam melakukan tindakan fisik agar tidak terburu-buru mengambil alih proses.",effect:"SETIAP KALI AKAN MENYENTUH MATERIAL, harus berhenti minimal 3 detik terlebih dahulu."}
+];
+let activeCurse=null;
+const KEY="flmpi_blind_building_2026_v1";
+function state(){try{return JSON.parse(localStorage.getItem(KEY)||'{"claimed":[],"history":[]}')}catch(e){return{claimed:[],history:[]}}}
+function saveState(s){localStorage.setItem(KEY,JSON.stringify(s))}
+function currentPlayer(){return (document.getElementById('playerName').value||'').trim()}
+function setPlayer(){const n=currentPlayer();if(!n){alert('Masukkan nama peserta terlebih dahulu.');return}document.getElementById('playerName').blur();renderHistory();}
+function renderCurses(){const s=state();document.getElementById('curseGrid').innerHTML=curses.map((c,i)=>{const used=s.claimed.includes(i);return `<div class="case ${used?'claimed':''}" data-index="${i}" onclick="openCurse(${i})" role="button" tabindex="0" aria-label="${used?'Kartu sudah diambil':'Buka kartu kutukan '+(i+1)}"><div class="case-inner"><div class="case-top"><span class="case-num">${String(i+1).padStart(2,'0')}</span><span class="case-index">CURSE</span></div><div class="case-title">${used?'KARTU TERKUNCI':c.title}</div><div class="case-action">${used?'SUDAH DIAMBIL':'KLIK UNTUK MEMBUKA →'}</div></div></div>`}).join('');document.querySelectorAll('.case').forEach(card=>card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCurse(Number(card.dataset.index))}}));document.getElementById('claimedCount').textContent=s.claimed.length;renderHistory()}
+function openCurse(i){const s=state();const name=currentPlayer();if(!name){alert('Masukkan dan tetapkan nama peserta sebelum membuka kartu.');document.getElementById('playerName').focus();return}if(s.claimed.includes(i)){alert('Kartu ini sudah diambil. Silakan pilih kartu lain.');return}const taken=s.history.filter(x=>x.name.toLowerCase()===name.toLowerCase()).length;if(taken>=2){alert(name+' sudah mendapatkan 2 kartu kutukan. Peserta ini tidak dapat mengambil kartu ketiga.');return}activeCurse=i;document.getElementById('curseTag').textContent='CURSE '+String(i+1).padStart(2,'0');document.getElementById('curseTitle').textContent=curses[i].title;document.getElementById('curseText').textContent=curses[i].text;document.getElementById('curseEffect').textContent=curses[i].effect;document.getElementById('recipientName').textContent=name;document.getElementById('modal').classList.add('show');document.getElementById('modal').setAttribute('aria-hidden','false')}
+function claimCurse(){if(activeCurse===null)return;const name=currentPlayer();const s=state();if(!name){alert('Nama peserta belum ditetapkan.');return}const taken=s.history.filter(x=>x.name.toLowerCase()===name.toLowerCase()).length;if(taken>=2){alert('Peserta ini sudah memiliki 2 kartu kutukan.');closeCurse();return}if(s.claimed.includes(activeCurse)){closeCurse();renderCurses();return}s.claimed.push(activeCurse);s.history.push({name,curse:activeCurse+1,title:curses[activeCurse].title,time:new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'})});saveState(s);closeCurse();renderCurses()}
+function renderHistory(){const s=state();const box=document.getElementById('history');if(!s.history.length){box.innerHTML='';return}box.innerHTML=s.history.map(x=>`<div class="history-item"><span><b>${x.name}</b> • Curse ${String(x.curse).padStart(2,'0')} — ${x.title}</span><span>${x.time}</span></div>`).join('')}
+function closeCurse(){document.getElementById('modal').classList.remove('show');document.getElementById('modal').setAttribute('aria-hidden','true');activeCurse=null}
+function resetGame(){if(confirm('Reset seluruh kartu dan riwayat sesi?')){localStorage.removeItem(KEY);renderCurses()}}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeCurse()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCurse()});renderCurses();
+</script>
+</body>
+</html>
